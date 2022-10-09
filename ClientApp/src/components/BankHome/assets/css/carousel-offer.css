@@ -1,0 +1,276 @@
+@charset "utf-8";
+.more-offers .carousel-control-next,
+.more-offers .carousel-control-prev {
+    display: none
+}
+
+.btn-floating i {
+    color: #000 !important
+}
+
+.carousel {
+    position: relative
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: auto
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    backface-visibility: hidden;
+    transition: transform .6s ease-in-out
+}
+
+.carousel-inner::after {
+    display: block;
+    clear: both;
+    content: ""
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    display: block
+}
+
+.carousel-item {
+    transition: none
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+    display: block
+}
+
+.active.carousel-item-right,
+.carousel-item-next:not(.carousel-item-left) {
+    transform: translateX(100%)
+}
+
+.active.carousel-item-left,
+.carousel-item-prev:not(.carousel-item-right) {
+    transform: translateX(-100%)
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    transform: none
+}
+
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right,
+.carousel-fade .carousel-item.active {
+    z-index: 1;
+    opacity: 1
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+    z-index: 0;
+    opacity: 0;
+    transition: 0s .6s opacity
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+    transition: none
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 15%;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+    transition: opacity .15s ease
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    transition: none
+}
+
+.carousel-control-next:focus,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:hover {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9
+}
+
+.carousel-control-prev {
+    left: 0
+}
+
+.carousel-control-next {
+    right: 0
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: no-repeat 50%/100% 100%
+}
+
+.carousel-control-prev-icon {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGZpbGw9JyNmZmYnIHZpZXdCb3g9JzAgMCA4IDgnPjxwYXRoIGQ9J001LjI1IDBsLTQgNCA0IDQgMS41LTEuNS0yLjUtMi41IDIuNS0yLjUtMS41LTEuNXonLz48L3N2Zz4=)
+}
+
+.carousel-control-next-icon {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGZpbGw9JyNmZmYnIHZpZXdCb3g9JzAgMCA4IDgnPjxwYXRoIGQ9J00yLjc1IDBsLTEuNSAxLjUgMi41IDIuNS0yLjUgMi41IDEuNSAxLjUgNC00LTQtNHonLz48L3N2Zz4=)
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none
+}
+
+.carousel-indicators li {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease
+}
+
+.carousel-indicators li {
+    transition: none
+}
+
+.carousel-indicators .active {
+    opacity: 1
+}
+
+.carousel-indicators li {
+    transition: none
+}
+
+.carousel-indicators .active {
+    opacity: 1
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 20px;
+    left: 15%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: center
+}
+
+.carousel .carousel-indicators li {
+    width: .625rem;
+    height: .625rem;
+    border-radius: 50%;
+    cursor: pointer
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: .6s;
+    transition-property: opacity
+}
+
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right,
+.carousel-fade .carousel-item.active {
+    opacity: 1
+}
+
+.carousel-fade .carousel-item-left.active,
+.carousel-fade .carousel-item-right.active {
+    opacity: 0
+}
+
+.carousel-multi-item .carousel-inner .carousel-item.active,
+.carousel-multi-item .carousel-item-next,
+.carousel-multi-item .carousel-item-prev {
+    display: block
+}
+
+.carousel-multi-item .carousel-inner.v-2 .carousel-item-next,
+.carousel-multi-item .carousel-inner.v-2 .carousel-item-prev,
+.carousel-multi-item .carousel-inner.v-2 .carousel-item.active {
+    display: flex
+}
+
+@media screen and (max-width:767.98px) {
+    .more-offers .carousel {
+        padding-left: 15px;
+        padding-right: 15px
+    }
+    .more-offers .carousel-control-next,
+    .more-offers .carousel-control-prev {
+        display: block;
+        border-top: 2px solid #d7d8d8;
+        border-bottom: 2px solid #d7d8d8;
+        padding-top: 5px;
+        opacity: 1
+    }
+    .more-offers .carousel-control-prev:hover,
+    .more-offers .carousel-control-next:hover {
+        background-color: #ddd
+    }
+    .offer-block img {
+        width: 100%
+    }
+    .more-offers .carousel-control-next {
+        right: -15px;
+        border-left: 2px solid #d7d8d8
+    }
+    .more-offers .carousel-control-prev {
+        left: -15px;
+        border-right: 2px solid #d7d8d8
+    }
+    .more-offers .carousel-control-prev-icon {
+        background-position: 0 -65px
+    }
+    .more-offers .carousel-control-next-icon {
+        background-position: 16px -65px
+    }
+}
