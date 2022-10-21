@@ -2,8 +2,9 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import fallback from '../../assets/fallback.jpg'
 
-import {Button, Form, Image, Modal} from "react-bootstrap";
+import {Button, FloatingLabel, Form, Image, Modal} from "react-bootstrap";
 
 export default function ModalsBank(props) {
     return (
@@ -28,9 +29,15 @@ export default function ModalsBank(props) {
                                     <Form.Label>{props.header} Name</Form.Label>
                                     <Form.Control type="text" name="DepartmentName" required
                                                   placeholder="Name"/>
+                                    <Form.Label>  Description</Form.Label>
+                                    <FloatingLabel controlId="floatingTextarea2" label="Description">
+                                        <Form.Control
+                                            as="textarea"
+                                            placeholder="Leave a Description here"
+                                            style={{ height: '100px' }}
+                                        />
+                                    </FloatingLabel>
                                 </Form.Group>
-                                <br/>
-                                <br/>
                                 <br/>
                                 <br/>
                                 <br/>
@@ -42,7 +49,7 @@ export default function ModalsBank(props) {
                             </Form>
                         </Col>
                         <Col sm={6}>
-                            <Image width="200px" height="200px" src={"test"}/>
+                            <Image width="200px" height="200px" src={fallback}/>
                             <input type="File"/>
                         </Col>
                     </Row>
