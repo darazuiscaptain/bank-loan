@@ -37,17 +37,19 @@ export default function HomeManagements(props) {
         <Container fluid="md">
             <Row>
                 <Col>
+                    <br/>
+                    <br/>
+                    <Button variant="primary"
+                            onClick={()=>seteditModalShow(true)}
+                    >add new {props.header} </Button>
                     <Card>
                         <h1>{props.header}</h1>
                         <br/>
                         <h5>{props.subheader}</h5>
-                        <Image src={props.subHeaderImage} alt={"no"}/>
+                        <Image src={props.subHeaderImage} alt={"no"} width={600} />
                     </Card>
-                    <br/>
-                    <br/>
-                    <Button variant="primary"
-                    onClick={()=>seteditModalShow(true)}
-                    >add new {props.header} </Button>
+
+
                     <ModalsBank
                         show={editModalShow}
                         header={props.header}

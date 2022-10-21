@@ -30,7 +30,11 @@ export default function ModalsBank(props) {
                                     <Form.Control type="text" name="DepartmentName" required
                                                   placeholder="Name"/>
                                 </Form.Group>
-
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
                                 <Form.Group>
                                     <Button variant="primary" type="submit">
                                         Add {props.header}
@@ -38,11 +42,12 @@ export default function ModalsBank(props) {
                                 </Form.Group>
                             </Form>
                         </Col>
+                        <Col sm={6}>
+                            <Image width="200px" height="200px" src={"test"}/>
+                            <input  type="File"/>
+                        </Col>
                     </Row>
-                    <Col sm={6}>
-                        <Image width="200px" height="200px" src={"test"}/>
-                        <input  type="File"/>
-                    </Col>
+
                 </Modal.Body>
 
                 <Modal.Footer>

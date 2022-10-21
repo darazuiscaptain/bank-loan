@@ -6,6 +6,8 @@ import './assets/css/bootstrap.min.css';
 import './assets/css/carousel-offer.css';
 import './assets/css/loan_calc.css';
 import './assets/css/select2.min.css';
+// import './assets/js/scripts'
+
 //import './assets/css/font-awesome.min.css';
 import './assets/css/smartbanner.css';
 /**
