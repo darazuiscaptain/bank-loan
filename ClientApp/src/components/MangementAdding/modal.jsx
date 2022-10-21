@@ -21,7 +21,6 @@ export default function ModalsBank(props) {
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-
                     <Row>
                         <Col sm={6}>
                             <Form onSubmit={props.handleSubmit}>
@@ -36,7 +35,7 @@ export default function ModalsBank(props) {
                                 <br/>
                                 <br/>
                                 <Form.Group>
-                                    <Button variant="primary" type="submit">
+                                    <Button variant="primary" type="submit" hidden={true}>
                                         Add {props.header}
                                     </Button>
                                 </Form.Group>
@@ -44,7 +43,7 @@ export default function ModalsBank(props) {
                         </Col>
                         <Col sm={6}>
                             <Image width="200px" height="200px" src={"test"}/>
-                            <input  type="File"/>
+                            <input type="File"/>
                         </Col>
                     </Row>
 
@@ -52,6 +51,9 @@ export default function ModalsBank(props) {
 
                 <Modal.Footer>
                     <Button variant="danger" onClick={props.onHide}>Close</Button>
+                    <Button variant="primary" type="submit">
+                        Add {props.header}
+                    </Button>
                 </Modal.Footer>
 
             </Modal>

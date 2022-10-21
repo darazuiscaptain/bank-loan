@@ -3,9 +3,10 @@ import {Counter} from "./components/Counter";
 import {FetchData} from "./components/FetchData";
 import {Home} from "./components/Home";
 import HomeManagements from "./components/MangementAdding/homeManagements";
-import functional from '../src/assets/functional.png';
-import product from '../src/assets/product.png';
-import offers from '../src/assets/offers.png';
+import {offers_data} from "./static/offers";
+import {functional_data} from "./static/functional";
+import {product_data} from "./static/product";
+
 
 const AppRoutes = [
     {
@@ -28,7 +29,8 @@ const AppRoutes = [
         element: <HomeManagements header={"Functions management"} subheader={"add functional components " +
         "" +
         "as shown below"}
-                                  subHeaderImage={functional}
+            // subHeaderImage={functional}
+                                  data={functional_data}
         />
     },
     {
@@ -38,7 +40,8 @@ const AppRoutes = [
         element: <HomeManagements header={"product management"} subheader={"add product components " +
         "" +
         "as shown below"}
-                                  subHeaderImage={product}
+            // subHeaderImage={product}
+                                  data={product_data}
         />
     },
     {
@@ -48,7 +51,8 @@ const AppRoutes = [
         element: <HomeManagements header={"offers management"} subheader={"add offers components " +
         "" +
         "as shown below"}
-                                  subHeaderImage={offers}
+            // subHeaderImage={offers}
+                                  data={offers_data}
         />
     },
     ...ApiAuthorzationRoutes

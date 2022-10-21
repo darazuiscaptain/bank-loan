@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import {Card} from "reactstrap";
 import {Button, Image} from "react-bootstrap";
 import ModalsBank from "./modal";
+import TableBank from "./table";
 
 
 export default function HomeManagements(props) {
@@ -33,6 +34,10 @@ export default function HomeManagements(props) {
                 })
     }
 
+
+
+
+
     return (
         <Container fluid="md">
             <Row>
@@ -46,7 +51,7 @@ export default function HomeManagements(props) {
                         <h1>{props.header}</h1>
                         <br/>
                         <h5>{props.subheader}</h5>
-                        <Image src={props.subHeaderImage} alt={"no"} width={600} />
+                        {/*<Image src={props.subHeaderImage} alt={"no"} width={600} />*/}
                     </Card>
 
 
@@ -56,8 +61,10 @@ export default function HomeManagements(props) {
                         handleSubmit={handleSubmit}
                         onHide={editModalClose}
                     />
+
                 </Col>
             </Row>
+            <TableBank   data={props.data}/>
         </Container>
     );
 }
