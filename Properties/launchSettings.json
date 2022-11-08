@@ -4,8 +4,7 @@
     "anonymousAuthentication": true,
     "iisExpress": {
       "applicationUrl": "http://localhost:30858",
-      "sslPort": 44317,
-      //DCHANGE PORT FROM SSL TACKTIKCE
+      "sslPort": 44317
     }
   },
   "profiles": {
